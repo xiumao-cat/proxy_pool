@@ -40,13 +40,13 @@ ProxyPool 爬虫代理IP池
   
   | 小幻代理     |  ✔    |    **    | [地址](https://ip.ihuan.me/)        | [`freeProxy08`](/fetcher/proxyFetcher.py#L134) |
   
-  | 3366代理库   |  ✔    |    **    | [地址](https://proxy.ip3366.net)   | [`freeProxy09`](/fetcher/proxyFetcher.py#L144) |
+  | 3366代理库  |  ✔    |    **    | [地址](https://proxy.ip3366.net)   | [`freeProxy09`](/fetcher/proxyFetcher.py#L144) |
   
   | 89代理      |  ✔    |    **     | [地址](https://www.89ip.cn/)         | [`freeProxy10`](/fetcher/proxyFetcher.py#L155) |
   
-  | 稻壳代理     |  ✔    |   ***   | [地址](https://www.docip.ne)         | [`freeProxy11`](/fetcher/proxyFetcher.py#L165) |
+  | 稻壳代理    |  ✔    |   ***   | [地址](https://www.docip.ne)         | [`freeProxy11`](/fetcher/proxyFetcher.py#L165) |
   
-  | binglx代理     |  ✔    |   ***   | [地址](https://www.binglx.cn)         | [`freeProxy12`](/fetcher/proxyFetcher.py#L180) |
+  | binglx代理  |  ✔    |   ***   | [地址](https://www.binglx.cn)         | [`freeProxy12`](/fetcher/proxyFetcher.py#L180) |
 
   
   如果还有其他好的免费代理网站, 可以在提交在[issues], 下次更新时会考虑在项目中支持。
@@ -120,8 +120,8 @@ docker-compose up -d
 | api | method | Description | params|
 | ----| ---- | ---- | ----|
 | / | GET | api介绍 | None |
-| /get | GET | 随机获取一个代理| 可选参数: `?type=https` 过滤支持https的代理|
-| /pop | GET | 获取并删除一个代理| 可选参数: `?type=https` 过滤支持https的代理|
+| /get | GET | 随机获取一个代理| 可选参数: 'type=https','region=地区' 过滤http 获取指定地区|
+| /pop | GET | 获取并删除一个代理| 可选参数: 'type=https','region=地区' 过滤http 获取指定地区|
 | /all | GET | 获取所有代理 |可选参数: `?type=https` 过滤支持https的代理|
 | /count | GET | 查看代理数量 |None|
 | /delete | GET | 删除代理  |`?proxy=host:ip`|
