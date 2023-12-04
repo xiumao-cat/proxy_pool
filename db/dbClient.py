@@ -86,8 +86,8 @@ class DbClient(withMetaclass(Singleton)):
                                                                                      password=self.db_pwd,
                                                                                      db=self.db_name)
 
-    def get(self, https, **kwargs):
-        return self.client.get(https, **kwargs)
+    def get(self, https, region, **kwargs):
+        return self.client.get(https, region, **kwargs)
 
     def put(self, key, **kwargs):
         return self.client.put(key, **kwargs)
@@ -101,8 +101,8 @@ class DbClient(withMetaclass(Singleton)):
     def exists(self, key, **kwargs):
         return self.client.exists(key, **kwargs)
 
-    def pop(self, https, **kwargs):
-        return self.client.pop(https, **kwargs)
+    def pop(self, https, region, **kwargs):
+        return self.client.pop(https, region, **kwargs)
 
     def getAll(self, https):
         return self.client.getAll(https)

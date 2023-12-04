@@ -19,6 +19,7 @@ from redis.connection import BlockingConnectionPool
 from handler.logHandler import LogHandler
 from random import choice
 from redis import Redis
+import re
 import json
 
 
@@ -47,19 +48,22 @@ class RedisClient(object):
                                                                    socket_timeout=5,
                                                                    **kwargs))
 
-    def get(self, https):
+    def get(self, https, region):
         """
         返回一个代理
         :return:
         """
         if https:
             items = self.__conn.hvals(self.name)
-            proxies = list(filter(lambda x: json.loads(x).get("https"), items))
+            chinese_pattern = re.compile(region)
+            proxies = list(filter(lambda x: json.loads(x).get("https") and chinese_pattern.search(x), items))
             return choice(proxies) if proxies else None
         else:
-            proxies = self.__conn.hkeys(self.name)
+            proxies = self.__conn.hvals(self.name)
+            chinese_pattern = re.compile(region)
+            proxies = list(filter(lambda x: chinese_pattern.search(x), proxies))
             proxy = choice(proxies) if proxies else None
-            return self.__conn.hget(self.name, proxy) if proxy else None
+            return proxy if proxies else None
 
     def put(self, proxy_obj):
         """
@@ -70,12 +74,12 @@ class RedisClient(object):
         data = self.__conn.hset(self.name, proxy_obj.proxy, proxy_obj.to_json)
         return data
 
-    def pop(self, https):
+    def pop(self, https, region):
         """
         弹出一个代理
         :return: dict {proxy: value}
         """
-        proxy = self.get(https)
+        proxy = self.get(https, region)
         if proxy:
             self.__conn.hdel(self.name, json.loads(proxy).get("proxy", ""))
         return proxy if proxy else None
