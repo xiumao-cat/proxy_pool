@@ -20,42 +20,28 @@ ProxyPool 爬虫代理IP池
 
 * 测试地址: http://demo.spiderpy.cn (勿压谢谢)
 
-### 免费代理源
+### 免费代理源（2023.12.4更新）
 
    目前实现的采集免费代理网站有(排名不分先后, 下面仅是对其发布的免费代理情况: 
    
-  |   代理名称   |  状态  |  更新速度 |  可用率  |  地址 | 代码                                             |
+  |   代理名称   |  状态  |  可用率  |  地址 | 代码                                             |
   | ---------   |  ---- | --------  | ------  | ----- |------------------------------------------------|
-  | 站大爷     |  ✔    |     ★     |   **     | [地址](https://www.zdaye.com/)    | [`freeProxy01`](/fetcher/proxyFetcher.py#L28)  |
-  | 66代理     |  ✔    |     ★     |   *     | [地址](http://www.66ip.cn/)         | [`freeProxy02`](/fetcher/proxyFetcher.py#L50)  |
-  | 开心代理    |   ✔   |     ★     |   *     | [地址](http://www.kxdaili.com/)     | [`freeProxy03`](/fetcher/proxyFetcher.py#L63)  |
-  | FreeProxyList |   ✔  |    ★     |   *    | [地址](https://www.freeproxylists.net/zh/) | [`freeProxy04`](/fetcher/proxyFetcher.py#L74)  |
-  | 快代理       |  ✔    |     ★     |   *     | [地址](https://www.kuaidaili.com/)  | [`freeProxy05`](/fetcher/proxyFetcher.py#L92)  |
-  | FateZero   |  ✔    |    ★★    |   *     | [地址](http://proxylist.fatezero.org) | [`freeProxy06`](/fetcher/proxyFetcher.py#L111) |
-  | 云代理       |  ✔    |    ★     |   *     | [地址](http://www.ip3366.net/)      | [`freeProxy07`](/fetcher/proxyFetcher.py#L124) |
-  | 小幻代理     |  ✔    |    ★★    |    *    | [地址](https://ip.ihuan.me/)        | [`freeProxy08`](/fetcher/proxyFetcher.py#L134) |
-  | 免费代理库   |  ✔    |     ☆     |    *    | [地址](http://ip.jiangxianli.com/)   | [`freeProxy09`](/fetcher/proxyFetcher.py#L144) |
-  | 89代理      |  ✔    |     ☆     |   *     | [地址](https://www.89ip.cn/)         | [`freeProxy10`](/fetcher/proxyFetcher.py#L155) |
-  | 稻壳代理     |  ✔    |     ★★    |   ***   | [地址](https://www.docip.ne)         | [`freeProxy11`](/fetcher/proxyFetcher.py#L165) |
+  | 站大爷     |  ✔    |   ***     | [地址](https://www.zdaye.com/)    | [`freeProxy01`](/fetcher/proxyFetcher.py#L27)  |
+  | 66代理     |  X    |         | [地址](http://www.66ip.cn/)         | [`freeProxy02`](/fetcher/proxyFetcher.py#L50)  |
+  | 开心代理    |   ✔   |   **     | [地址](http://www.kxdaili.com/)     | [`freeProxy03`](/fetcher/proxyFetcher.py#L62)  |
+  | 69代理      |   ✔  |   **    | [地址](https://www.69ip.cn/) | [`freeProxy04`](/fetcher/proxyFetcher.py#L77)  |
+  | 快代理       |  ✔    |   **     | [地址](https://www.kuaidaili.com/)  | [`freeProxy05`](/fetcher/proxyFetcher.py#L92)  |
+  | FateZero   |  ✔    |   **     | [地址](http://proxylist.fatezero.org) | [`freeProxy06`](/fetcher/proxyFetcher.py#L111) |
+  | 云代理       |  ✔    |   **     | [地址](http://www.ip3366.net/)      | [`freeProxy07`](/fetcher/proxyFetcher.py#L124) |
+  | 小幻代理     |  ✔    |    **    | [地址](https://ip.ihuan.me/)        | [`freeProxy08`](/fetcher/proxyFetcher.py#L134) |
+  | 3366代理库   |  ✔    |    **    | [地址](https://proxy.ip3366.net)   | [`freeProxy09`](/fetcher/proxyFetcher.py#L144) |
+  | 89代理      |  ✔    |    **     | [地址](https://www.89ip.cn/)         | [`freeProxy10`](/fetcher/proxyFetcher.py#L155) |
+  | 稻壳代理     |  ✔    |   ***   | [地址](https://www.docip.ne)         | [`freeProxy11`](/fetcher/proxyFetcher.py#L165) |
+  | binglx代理     |  ✔    |   ***   | [地址](https://www.binglx.cn)         | [`freeProxy12`](/fetcher/proxyFetcher.py#L180) |
 
   
   如果还有其他好的免费代理网站, 可以在提交在[issues], 下次更新时会考虑在项目中支持。
 ### 运行项目
-
-##### 下载代码:
-
-* git clone
-
-```bash
-git clone git@github.com:jhao104/proxy_pool.git
-```
-
-* releases
-
-```bash
-https://github.com/jhao104/proxy_pool/releases 下载对应zip文件
-```
-
 ##### 安装依赖:
 
 ```bash
