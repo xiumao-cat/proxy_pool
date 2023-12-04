@@ -24,8 +24,6 @@ ProxyPool 爬虫代理IP池
 
    目前实现的采集免费代理网站有(排名不分先后, 下面仅是对其发布的免费代理情况: 
    
-  |   代理名称   |  状态  |  可用率  |  地址 | 代码                                     |
-  | ---------   |  ---- | --------  | ------  | ----- |------------------------------------------------|
   | 站大爷     |  ✔    |   ***     | [地址](https://www.zdaye.com/)    | [`freeProxy01`](/fetcher/proxyFetcher.py#L27)  |
   | 66代理     |  X    |         | [地址](http://www.66ip.cn/)         | [`freeProxy02`](/fetcher/proxyFetcher.py#L50)  |
   | 开心代理    |   ✔   |   **     | [地址](http://www.kxdaili.com/)     | [`freeProxy03`](/fetcher/proxyFetcher.py#L62)  |
